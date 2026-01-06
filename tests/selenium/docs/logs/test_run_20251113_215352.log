@@ -1,0 +1,9 @@
+[2025-11-13 21:53:52] START test_negative_disposable_email
+[2025-11-13 21:53:54] Opened http://localhost:8000/index.html
+[2025-11-13 21:53:58] Saved screenshot: C:\Users\Shreya\Desktop\BuildNexTech\registration-app\tests\selenium\docs\screenshots\negative_disposable_before_submit.png
+[2025-11-13 21:53:58] Clicked submit (disposable email)
+[2025-11-13 21:53:58] Saved screenshot: C:\Users\Shreya\Desktop\BuildNexTech\registration-app\tests\selenium\docs\screenshots\negative_disposable_after_submit.png
+[2025-11-13 21:53:58] EmailError: 'Disposable email addresses are not allowed'
+[2025-11-13 21:53:58] PASS test_negative_disposable_email
+[2025-11-13 21:53:58] Saved browser console logs to C:\Users\Shreya\Desktop\BuildNexTech\registration-app\tests\selenium\docs\logs\negative_disposable_email_console_20251113_215352.log
+[2025-11-13 21:54:00] Result: PASS

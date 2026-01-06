@@ -1,0 +1,9 @@
+[2025-11-13 21:58:39] START test_negative_invalid_country_code
+[2025-11-13 21:58:41] Opened http://localhost:8000/index.html
+[2025-11-13 21:58:45] Saved screenshot: C:\Users\Shreya\Desktop\BuildNexTech\registration-app\tests\selenium\docs\screenshots\negative_invalid_cc_before.png
+[2025-11-13 21:58:45] Clicked submit (invalid country code)
+[2025-11-13 21:58:45] Saved screenshot: C:\Users\Shreya\Desktop\BuildNexTech\registration-app\tests\selenium\docs\screenshots\negative_invalid_cc_after.png
+[2025-11-13 21:58:45] CountryCodeError: 'Unrecognized country code: +999. Use a correct calling code like +1, +91.'
+[2025-11-13 21:58:45] PASS test_negative_invalid_country_code
+[2025-11-13 21:58:45] Saved browser console logs to C:\Users\Shreya\Desktop\BuildNexTech\registration-app\tests\selenium\docs\logs\negative_invalid_cc_console_20251113_215839.log
+[2025-11-13 21:58:48] Result: PASS

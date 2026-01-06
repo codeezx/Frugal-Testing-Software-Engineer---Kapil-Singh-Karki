@@ -1,0 +1,16 @@
+[2025-11-12 22:07:12] === RUN_ALL_TESTS START 2025-11-12 22:07:12 ===
+[2025-11-12 22:07:12] Running test_negative_missing_lastname.py
+[2025-11-12 22:07:12] === START test_negative_missing_lastname ===
+[2025-11-12 22:07:12] Script test_negative_missing_lastname.py exited with code 1
+[2025-11-12 22:07:12] Running test_form_logic.py
+[2025-11-12 22:07:13] === START test_form_logic ===
+[2025-11-12 22:07:13] Script test_form_logic.py exited with code 1
+[2025-11-12 22:07:13] Running test_positive_complete_registration.py
+[2025-11-12 22:07:13] === START test_positive_complete_registration ===
+[2025-11-12 22:07:13] Script test_positive_complete_registration.py exited with code 1
+[2025-11-12 22:07:13] 
+=== SUMMARY ===
+[2025-11-12 22:07:13] test_negative_missing_lastname.py: FAIL
+[2025-11-12 22:07:13] test_form_logic.py: FAIL
+[2025-11-12 22:07:13] test_positive_complete_registration.py: FAIL
+[2025-11-12 22:07:13] === RUN_ALL_TESTS END 2025-11-12 22:07:13 ===

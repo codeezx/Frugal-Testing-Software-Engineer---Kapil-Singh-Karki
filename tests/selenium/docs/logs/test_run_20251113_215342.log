@@ -1,0 +1,26 @@
+[2025-11-13 21:53:42] Running test_negative_missing_lastname.py
+[2025-11-13 21:53:42] START test_negative_missing_lastname
+[2025-11-13 21:53:45] Opened http://localhost:8000/index.html (title: BuildNexTech Frugal Testing - OA by Shreya Gupta)
+[2025-11-13 21:53:49] Saved screenshot: C:\Users\Shreya\Desktop\BuildNexTech\registration-app\tests\selenium\docs\screenshots\negative_missing_lastname_before_submit.png
+[2025-11-13 21:53:49] Clicked submit
+[2025-11-13 21:53:49] Saved screenshot: C:\Users\Shreya\Desktop\BuildNexTech\registration-app\tests\selenium\docs\screenshots\negative_missing_lastname_after_submit.png
+[2025-11-13 21:53:49] LastNameError: ''
+[2025-11-13 21:53:49] FAIL test_negative_missing_lastname -> Expected lastName inline error
+[2025-11-13 21:53:49] Saved screenshot: C:\Users\Shreya\Desktop\BuildNexTech\registration-app\tests\selenium\docs\screenshots\negative_missing_lastname_exception.png
+[2025-11-13 21:53:49] Saved browser console logs to C:\Users\Shreya\Desktop\BuildNexTech\registration-app\tests\selenium\docs\logs\neg_missingln_ex_console_20251113_215342.log
+[2025-11-13 21:53:51] Result: FAIL
+[2025-11-13 21:53:51] test_negative_missing_lastname.py exit code: 0
+[2025-11-13 21:53:51] Running test_negative_disposable_email.py
+[2025-11-13 21:54:00] test_negative_disposable_email.py exit code: 0
+[2025-11-13 21:54:00] Running test_negative_invalid_country_code.py
+[2025-11-13 21:54:08] test_negative_invalid_country_code.py exit code: 0
+[2025-11-13 21:54:08] Running test_form_logic.py
+[2025-11-13 21:54:23] test_form_logic.py exit code: 0
+[2025-11-13 21:54:23] Running test_positive_complete_registration.py
+[2025-11-13 21:54:33] test_positive_complete_registration.py exit code: 0
+[2025-11-13 21:54:33] === SUMMARY ===
+[2025-11-13 21:54:33] test_negative_missing_lastname.py: PASS
+[2025-11-13 21:54:33] test_negative_disposable_email.py: PASS
+[2025-11-13 21:54:33] test_negative_invalid_country_code.py: PASS
+[2025-11-13 21:54:33] test_form_logic.py: PASS
+[2025-11-13 21:54:33] test_positive_complete_registration.py: PASS

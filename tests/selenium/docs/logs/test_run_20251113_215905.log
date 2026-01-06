@@ -1,0 +1,9 @@
+[2025-11-13 21:59:05] START test_positive_complete_registration
+[2025-11-13 21:59:07] Opened http://localhost:8000/index.html
+[2025-11-13 21:59:11] Saved screenshot: C:\Users\Shreya\Desktop\BuildNexTech\registration-app\tests\selenium\docs\screenshots\positive_before_submit.png
+[2025-11-13 21:59:13] Saved screenshot: C:\Users\Shreya\Desktop\BuildNexTech\registration-app\tests\selenium\docs\screenshots\positive_after_submit.png
+[2025-11-13 21:59:13] FormResult: 'registration successful! you may download the submitted data below.
+download submission (json)'
+[2025-11-13 21:59:13] PASS test_positive_complete_registration
+[2025-11-13 21:59:13] Saved browser console logs to C:\Users\Shreya\Desktop\BuildNexTech\registration-app\tests\selenium\docs\logs\positive_complete_registration_console_20251113_215905.log
+[2025-11-13 21:59:15] Result: PASS

@@ -1,0 +1,163 @@
+/* css/style.css
+   Sleek modern design for BuildNexTech Frugal Testing - OA by Shreya Gupta
+   Includes styles for country code input and updated layout.
+*/
+
+:root{
+  /* Palette */
+  --bg: #0f1724;
+  --card-ink: rgba(255,255,255,0.95);
+  --muted: rgba(255,255,255,0.65);
+  --glass-border: rgba(255,255,255,0.06);
+  --accent: #7c5cff;
+  --accent-2: #00d4ff;
+  --danger: #ff6b6b;
+  --success: #4ade80;
+  --radius: 14px;
+  --shadow-1: 0 6px 30px rgba(2,6,23,0.6);
+  font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Reset */
+*{ box-sizing:border-box }
+html,body{ height:100% }
+
+/* body fixed so top won't cut off */
+body{
+  margin:0;
+  min-height:100vh;
+  background:
+    radial-gradient(1200px 600px at 10% 10%, rgba(124,92,255,0.08), transparent 8%),
+    radial-gradient(900px 500px at 95% 90%, rgba(0,212,255,0.06), transparent 10%),
+    var(--bg);
+  color:var(--card-ink);
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+  padding:48px 20px 70px;
+  overflow-y:auto;
+}
+
+/* container */
+.container{ width:100%; max-width:1080px; margin:0 auto; padding:18px; }
+
+/* header */
+.site-header{ text-align:center; margin-bottom:20px; }
+.site-header h1{ margin:0; font-size:1.25rem; font-weight:700; color:var(--card-ink); }
+.lead{ color:var(--muted); margin:6px 0 0; font-size:0.92rem; }
+
+/* form card */
+.form-card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
+  backdrop-filter: blur(10px) saturate(120%);
+  border:1px solid var(--glass-border);
+  border-radius: calc(var(--radius) + 2px);
+  box-shadow: var(--shadow-1);
+  padding:28px;
+  position:relative;
+  overflow:hidden;
+}
+.form-card::after{
+  content:''; position:absolute; left:-40%; top:-30%; width:200%; height:180%;
+  background: linear-gradient(90deg, rgba(124,92,255,0.08), rgba(0,212,255,0.06), transparent 60%);
+  transform: rotate(12deg); filter: blur(40px); pointer-events:none; z-index:0;
+}
+.form-card > *{ position:relative; z-index:1 }
+.form-card h2{ margin:0 0 18px; font-size:1.1rem; color:var(--card-ink) }
+
+/* grid layout */
+.form-row{ display:grid; grid-template-columns:1fr; gap:14px; margin-bottom:12px; }
+@media(min-width:900px){
+  /* special case: when country code + phone + dob in same row we want 3 columns on wide screens */
+  .form-row{ grid-template-columns:repeat(2,1fr) }
+  .form-group.full{ grid-column:1 / -1 }
+}
+
+/* form-group */
+.form-group{ display:flex; flex-direction:column; gap:8px; position:relative; }
+label{ font-size:0.9rem; color:var(--card-ink); font-weight:600; display:flex; align-items:center; gap:8px; }
+.req{ color:var(--danger); font-weight:700; margin-left:6px; font-size:0.95rem }
+
+/* inputs */
+input[type="text"], input[type="email"], input[type="tel"], input[type="password"],
+input[type="date"], select, textarea {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.015));
+  border:1px solid rgba(255,255,255,0.06);
+  padding:12px 14px;
+  border-radius:10px;
+  color:var(--card-ink);
+  font-size:0.95rem;
+  outline:none;
+  transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+  box-shadow: inset 0 -1px 0 rgba(255,255,255,0.02);
+}
+option{
+  color:black;
+}
+input::placeholder{ color:rgba(255,255,255,0.35); }
+input:focus, select:focus { transform:translateY(-1px); border-color: rgba(124,92,255,0.9); box-shadow: 0 6px 18px rgba(124,92,255,0.08), 0 0 0 6px rgba(124,92,255,0.04); }
+
+/* country code small input styling */
+.country-code-group input {
+  width:96px;            /* compact width for e.g. +91, +1, +351 */
+  padding-left:12px;
+  text-align:left;
+}
+
+/* Hint and error */
+.hint{ font-size:0.82rem; color:var(--muted); margin-top:2px; }
+.error{ color:var(--danger); font-size:0.9rem; min-height:18px; margin-top:4px; }
+
+/* password meter */
+.password-meter{ height:10px; background: rgba(255,255,255,0.03); border-radius:999px; overflow:hidden; margin-top:6px; border: 1px solid rgba(255,255,255,0.02); }
+.password-meter .bar{ height:100%; width:0%; transition: width .22s ease, background .22s ease; }
+.pw-label{ margin-top:8px; font-size:0.82rem; color:var(--muted); display:inline-block; }
+
+/* strength color states (handled via data-strength attr) */
+.password-meter[data-strength="0"] .bar{ width:6%; background: linear-gradient(90deg,var(--danger), #ff7b7b); }
+.password-meter[data-strength="1"] .bar{ width:30%; background: linear-gradient(90deg,#ff9b6b,#ffb86b); }
+.password-meter[data-strength="2"] .bar{ width:55%; background: linear-gradient(90deg,#ffd36b,#a1e3d8); }
+.password-meter[data-strength="3"] .bar{ width:80%; background: linear-gradient(90deg,#7ce5c8,#7c5cff); }
+.password-meter[data-strength="4"] .bar{ width:100%; background: linear-gradient(90deg,var(--accent-2),var(--accent)); }
+
+/* radio (gender) */
+.radio-group{ display:flex; gap:14px; align-items:center; flex-wrap:wrap; }
+.radio{ --size:20px; display:inline-flex; align-items:center; gap:10px; cursor:pointer; padding:6px 8px; border-radius:8px; transition: background .12s ease, transform .08s ease; }
+.radio input[type="radio"]{ appearance:none; -webkit-appearance:none; width:var(--size); height:var(--size); border-radius:999px; border:2px solid rgba(255,255,255,0.12); background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); position:relative; cursor:pointer; transition: border-color .12s ease, box-shadow .12s ease; }
+.radio input[type="radio"]::after{ content:''; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%) scale(0); width:10px; height:10px; background: linear-gradient(90deg,var(--accent-2),var(--accent)); border-radius:999px; transition: transform .12s ease; }
+.radio input[type="radio"]:checked{ border-color: transparent; box-shadow: 0 6px 18px rgba(124,92,255,0.06), 0 0 0 6px rgba(124,92,255,0.03); }
+.radio input[type="radio"]:checked::after{ transform:translate(-50%,-50%) scale(1); }
+.radio:hover{ transform:translateY(-2px); background: rgba(255,255,255,0.01); }
+.radio-label{ color:var(--card-ink); font-size:0.95rem; }
+
+/* buttons */
+.actions{ display:flex; gap:12px; align-items:center; margin-top:10px; flex-wrap:wrap; }
+.btn{ display:inline-flex; align-items:center; gap:10px; padding:10px 16px; border-radius:12px; border:none; cursor:pointer; font-weight:600; font-size:0.95rem; color:white; background: linear-gradient(90deg, var(--accent), var(--accent-2)); box-shadow: 0 8px 30px rgba(124,92,255,0.14); }
+.btn:active{ transform: translateY(1px) scale(0.997); }
+.btn[disabled]{ opacity:0.6; cursor:not-allowed; transform:none; box-shadow:none; }
+.btn-secondary{ background: transparent; color:var(--card-ink); border:1px solid rgba(255,255,255,0.06); box-shadow:none; }
+
+/* form result */
+#formResult{ margin-top:12px; font-weight:700; color:var(--success); }
+#formResult.error{ color:var(--danger) }
+
+/* footer */
+.site-footer{ text-align:center; color:var(--muted); margin-top:18px; font-size:0.92rem; }
+
+/* responsive tweaks */
+@media(max-width:819px){
+  body{ padding:36px 14px 70px; }
+  .form-card{ padding:22px; }
+  .container{ padding:0 }
+  .country-code-group input{ width:84px; }
+}
+
+/* focus visibility */
+:focus-visible{ outline: 3px solid rgba(124,92,255,0.12); outline-offset:4px; border-radius:10px; }
+
+/* utilities */
+.text-muted{ color:var(--muted); font-size:0.9rem }
+.small{ font-size:0.85rem; color:var(--muted) }
+.center{ text-align:center }

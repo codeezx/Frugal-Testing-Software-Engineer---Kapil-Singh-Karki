@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BuildNexTech Frugal Testing - OA by Shreya Gupta</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="container" id="main">
+    <header class="site-header">
+      <h1>BuildNexTech Frugal Testing - OA by Shreya Gupta</h1>
+      <p class="lead">Online Assessment Task — Registration System</p>
+    </header>
+
+    <section class="form-card" aria-labelledby="registerHeading">
+      <h2 id="registerHeading">Create your account</h2>
+
+      <form id="registrationForm" novalidate>
+        <!-- Personal details -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">First Name <span class="req">*</span></label>
+            <input id="firstName" name="firstName" type="text" placeholder="Enter first name" required autocomplete="given-name" />
+            <small class="hint">What should we call you?</small>
+            <div class="error" id="firstNameError" aria-live="polite"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="lastName">Last Name <span class="req">*</span></label>
+            <input id="lastName" name="lastName" type="text" placeholder="Enter last name" required autocomplete="family-name" />
+            <small class="hint">Family name / surname</small>
+            <div class="error" id="lastNameError" aria-live="polite"></div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group full">
+            <label for="email">Email <span class="req">*</span></label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required autocomplete="email" />
+            <small class="hint">Use a personal email (disposables like tempmail.com are blocked)</small>
+            <div class="error" id="emailError" aria-live="polite"></div>
+          </div>
+        </div>
+
+        <!-- phone & country code row -->
+        <div class="form-row">
+          <div class="form-group country-code-group">
+            <label for="countryCode">Country Code <span class="req">*</span></label>
+            <input id="countryCode" name="countryCode" type="text" placeholder="+91" required />
+            <small class="hint">Enter valid country calling code (e.g. +1, +91)</small>
+            <div class="error" id="countryCodeError" aria-live="polite"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone <span class="req">*</span></label>
+            <input id="phone" name="phone" type="tel" placeholder="98765 43210" required autocomplete="tel" />
+            <small class="hint">Phone number without country code</small>
+            <div class="error" id="phoneError" aria-live="polite"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input id="dob" name="dob" type="date" />
+            <small class="hint">Optional — used for profile personalization</small>
+          </div>
+        </div>
+
+        <!-- Gender -->
+        <div class="form-row">
+          <div class="form-group full">
+            <label>Gender <span class="req">*</span></label>
+            <div class="radio-group" role="radiogroup" aria-labelledby="genderLabel">
+              <label class="radio">
+                <input type="radio" id="gender_male" name="gender" value="male" />
+                <span class="radio-faux" aria-hidden="true"></span>
+                <span class="radio-label">Male</span>
+              </label>
+
+              <label class="radio">
+                <input type="radio" id="gender_female" name="gender" value="female" />
+                <span class="radio-faux" aria-hidden="true"></span>
+                <span class="radio-label">Female</span>
+              </label>
+
+              <label class="radio">
+                <input type="radio" id="gender_other" name="gender" value="other" />
+                <span class="radio-faux" aria-hidden="true"></span>
+                <span class="radio-label">Other</span>
+              </label>
+            </div>
+            <small class="hint">Select your gender (required for this demo)</small>
+            <div class="error" id="genderError" aria-live="polite"></div>
+          </div>
+        </div>
+
+        <!-- Location -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="country">Country <span class="req">*</span></label>
+            <select id="country" name="country" required>
+              <option value="">Select country</option>
+            </select>
+            <small class="hint">Selecting your country will load states</small>
+            <div class="error" id="countryError" aria-live="polite"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="state">State <span class="req">*</span></label>
+            <select id="state" name="state" required>
+              <option value="">Select state</option>
+            </select>
+            <small class="hint">Choose state after selecting country</small>
+            <div class="error" id="stateError" aria-live="polite"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="city">City <span class="req">*</span></label>
+            <input id="city" name="city" type="text" placeholder="Enter your city" required />
+            <small class="hint">Type your city (we'll use it to personalize results)</small>
+            <div class="error" id="cityError" aria-live="polite"></div>
+          </div>
+        </div>
+
+        <!-- Password -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="password">Password <span class="req">*</span></label>
+            <input id="password" name="password" type="password" placeholder="Create a password" required autocomplete="new-password" />
+            <div class="password-meter" id="passwordMeter" data-strength="0" aria-hidden="true">
+              <div class="bar"></div>
+            </div>
+            <div class="pw-label" id="pwStrengthLabel">Strength: —</div>
+            <small class="hint">At least 8 chars, include uppercase, number & symbol</small>
+            <div class="error" id="passwordError" aria-live="polite"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="confirmPassword">Confirm Password <span class="req">*</span></label>
+            <input id="confirmPassword" name="confirmPassword" type="password" placeholder="Re-type password" required autocomplete="new-password" />
+            <small class="hint">Must match the password above</small>
+            <div class="error" id="confirmPasswordError" aria-live="polite"></div>
+          </div>
+        </div>
+
+        <!-- Terms -->
+        <div class="form-row">
+          <div class="form-group full">
+            <label class="checkbox-label">
+              <input id="terms" name="terms" type="checkbox" required />
+              I accept the <a href="#" target="_blank">Terms & Conditions</a>.
+            </label>
+            <div class="error" id="termsError" aria-live="polite"></div>
+          </div>
+        </div>
+
+        <div class="form-row actions">
+          <button id="submitBtn" type="submit" class="btn">Register</button>
+          <button id="resetBtn" type="reset" class="btn btn-secondary">Reset</button>
+        </div>
+
+        <div id="formResult" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> BuildNexTech Frugal Testing - OA by Shreya Gupta</p>
+    </footer>
+  </main>
+
+  <script src="js/data/countries.js"></script>
+  <script src="js/register.js" defer></script>
+</body>
+</html>

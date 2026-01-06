@@ -1,0 +1,16 @@
+[2025-11-13 21:54:52] Running test_negative_missing_lastname.py
+[2025-11-13 21:55:01] test_negative_missing_lastname.py exit code: 0
+[2025-11-13 21:55:01] Running test_negative_disposable_email.py
+[2025-11-13 21:55:10] test_negative_disposable_email.py exit code: 0
+[2025-11-13 21:55:10] Running test_negative_invalid_country_code.py
+[2025-11-13 21:55:19] test_negative_invalid_country_code.py exit code: 0
+[2025-11-13 21:55:19] Running test_form_logic.py
+[2025-11-13 21:55:37] test_form_logic.py exit code: 0
+[2025-11-13 21:55:37] Running test_positive_complete_registration.py
+[2025-11-13 21:55:48] test_positive_complete_registration.py exit code: 0
+[2025-11-13 21:55:48] === SUMMARY ===
+[2025-11-13 21:55:48] test_negative_missing_lastname.py: PASS
+[2025-11-13 21:55:48] test_negative_disposable_email.py: PASS
+[2025-11-13 21:55:48] test_negative_invalid_country_code.py: PASS
+[2025-11-13 21:55:48] test_form_logic.py: PASS
+[2025-11-13 21:55:48] test_positive_complete_registration.py: PASS

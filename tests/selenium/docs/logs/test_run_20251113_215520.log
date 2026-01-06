@@ -1,0 +1,14 @@
+[2025-11-13 21:55:20] START test_form_logic
+[2025-11-13 21:55:22] Form loaded
+[2025-11-13 21:55:28] Country options sample: ['Select country', 'Afghanistan', 'Albania', 'Algeria', 'American Samoa', 'AndorrA']
+[2025-11-13 21:55:29] State options count: 37
+[2025-11-13 21:55:30] Saved screenshot: C:\Users\Shreya\Desktop\BuildNexTech\registration-app\tests\selenium\docs\screenshots\logic_cascade_india.png
+[2025-11-13 21:55:32] Submit disabled? true
+[2025-11-13 21:55:32] ConfirmPasswordError: 'Passwords do not match'
+[2025-11-13 21:55:34] Saved screenshot: C:\Users\Shreya\Desktop\BuildNexTech\registration-app\tests\selenium\docs\screenshots\logic_after_pw_fix.png
+[2025-11-13 21:55:34] Submit disabled (expect True)?: true
+[2025-11-13 21:55:35] Submit disabled after gender+terms (expect False): true
+[2025-11-13 21:55:35] FAIL test_form_logic -> 
+[2025-11-13 21:55:35] Saved screenshot: C:\Users\Shreya\Desktop\BuildNexTech\registration-app\tests\selenium\docs\screenshots\logic_exception.png
+[2025-11-13 21:55:35] Saved browser console logs to C:\Users\Shreya\Desktop\BuildNexTech\registration-app\tests\selenium\docs\logs\logic_ex_console_20251113_215520.log
+[2025-11-13 21:55:37] Result: FAIL
