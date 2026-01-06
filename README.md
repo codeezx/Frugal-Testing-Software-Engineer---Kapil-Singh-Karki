@@ -1,1 +1,0 @@
-# Frugal-Testing-Software-Engineer---Kapil-Singh-Karki
